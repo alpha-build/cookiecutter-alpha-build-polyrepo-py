@@ -31,5 +31,5 @@ Utils that don't come with Git Bash by default, like `GNU Make`, `rsync`, \`zstd
 
    ```bash
    # from repo root
-   ./build-support/install_<utility>.sh
+   ./build-support/git-bash-integration/install_<utility>.sh
    ```
