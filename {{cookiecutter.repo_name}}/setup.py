@@ -16,8 +16,8 @@ def main() -> None:
         install_requires=REQS_FILE.read_text(),
         zip_safe=False,  # for mypy
         package_data={'{self.lib_name}': ['py.typed']},  # expose types to users  # TODO
-        author='{{cookiecutter.author}}',
-        author_email='{{cookiecutter.email}}',
+        author='{{cookiecutter.author_name}}',
+        author_email='{{cookiecutter.author_email}}',
         description='',
         long_description=README_FILE.read_text(),
     )
