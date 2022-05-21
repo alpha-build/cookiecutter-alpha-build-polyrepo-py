@@ -1,0 +1,30 @@
+[tool.pytest.ini_options]
+addopts = "--cov={{cookiecutter.project_name}} --cov-fail-under=75 -vv --durations=10"
+
+[tool.isort]
+profile = 'black'
+line_length = 120
+
+[tool.black]
+line-length = 120
+skip-string-normalization = true
+
+[tool.bandit]
+skips = ["B101"]
+
+[tool.pylint.MASTER]
+extension-pkg-whitelist = "pydantic"
+
+[tool.pylint.FORMAT]
+max-line-length = 120
+disable = [
+    "import-error",  # pre-commit does not give access to full env
+    "fixme",
+    "logging-format-interpolation",
+    "logging-fstring-interpolation",
+    "logging-not-lazy",
+    "missing-class-docstring",
+    "missing-function-docstring",
+    "missing-module-docstring",
+    "too-few-public-methods",
+]
