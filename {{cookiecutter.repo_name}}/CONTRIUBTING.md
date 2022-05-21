@@ -29,6 +29,7 @@ For example:
 - `make lint since=HEAD~1` runs all formatters on all files that changed since "2 commits ago".
 - `make lint since=--cached` runs all linters on all files that are "git added".
 - `make lint on=my_dir/ since=HEAD~2` will run all linters on all files in `my_dir/` that changed since "3 commits ago".
+
 </details>
 <!-- markdownlint-disable MD033 -->
 
@@ -47,12 +48,12 @@ For example:
 
 ### Python environment
 
-**To reproduce the environment exactly**
+#### To reproduce the environment exactly
 
 Open the console and, in an empty environment, run `make env`. This reproduces your environment according to
 `constraints.txt`. That is, every time one runs `make env` the environment will always resolve identically.
 
-**To modify the environment**
+#### To modify the environment
 
 Open the console and, in an empty environment, run `make env-upgrade`. Run this if you add/remove a new dependency or
 if you simply want to let `pip` re-resolve (e.g., to upgrade) the environment and dump the new resolution in the lock
