@@ -25,10 +25,11 @@ Please also list any relevant details for your test configuration
 - [ ] Test B
 
 **Test Configuration**:
-* Firmware version:
-* Hardware:
-* Toolchain:
-* SDK:
+
+- Firmware version:
+- Hardware:
+- Toolchain:
+- SDK:
 
 ## Checklist:
 

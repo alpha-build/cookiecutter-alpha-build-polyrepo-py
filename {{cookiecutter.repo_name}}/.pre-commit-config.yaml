@@ -39,7 +39,7 @@ repos:
           - --wrap-summaries=120
           - --wrap-descriptions=120
   - repo: https://github.com/ikamensh/flynt
-    rev: '0.76'
+    rev: "0.76"
     hooks:
       - id: flynt
   - repo: https://github.com/pycqa/isort

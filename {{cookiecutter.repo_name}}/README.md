@@ -1,6 +1,7 @@
 # {{cookiecutter.project_name}}
 
-[//]: # (add-your-build-status-badge-here)
+[//]: # "add-your-build-status-badge-here"
+
 [![powered_by_alpha_build](https://img.shields.io/badge/Powered%20by%20-AlphaBuild-lightblue?style=flat&logo=CMake&logoColor=lightblue)
 ](https://github.com/cristianmatache/alpha-build)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)

@@ -40,7 +40,7 @@ For example:
 - **Windows:**
   1. You need to have `Git Bash` installed.
   2. It is recommended to use everything from `Git Bash`
-  (although one may use `cmd` or `PowerShell` provided `$PATH` is set properly).
+     (although one may use `cmd` or `PowerShell` provided `$PATH` is set properly).
   3. Install `Make` for `Git Bash` by running `./build-support/git-bash-utils/install_make.sh`.
 - **MacOS:**
   1. Add a few GNU utils to your shell: `brew install findutils grep`
@@ -58,10 +58,10 @@ Open the console and, in an empty environment, run `make env-upgrade`. Run this 
 if you simply want to let `pip` re-resolve (e.g., to upgrade) the environment and dump the new resolution in the lock
 file.
 
-
 ### AlphaBuild maintenance
 
 To upgrade AlphaBuild run the following:
+
 ```bash
 pip install alpha-build-core --target tmp/
 tar -xvf tmp/alpha_build_core.tar.gz

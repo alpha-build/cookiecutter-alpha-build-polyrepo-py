@@ -5,7 +5,6 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -16,7 +15,7 @@ jobs:
       - name: Set up Python {{ "${{matrix.python-version}}" }}
         uses: actions/setup-python@v2
         with:
-          python-version: {{'${{matrix.python-version}}': null}: null}
+          python-version: {{ "${{matrix.python-version}}" }}
       - name: Install dependencies
         run: |
           make env
