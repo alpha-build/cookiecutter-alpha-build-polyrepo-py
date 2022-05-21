@@ -4,7 +4,6 @@ repos:
   - repo: https://github.com/lyz-code/yamlfix/
     rev: 0.9.0
     hooks:
-      # On Windows, this writes \r\n newlines that need to be fixed by the next hook
       - id: yamlfix
   # GENERAL
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -18,6 +17,7 @@ repos:
       - id: check-ast
       - id: check-docstring-first
       - id: check-yaml
+        exclude: .*ci.yml
       - id: check-toml
       - id: check-added-large-files
   # Python auto-formatters
@@ -47,14 +47,3 @@ repos:
     hooks:
       - id: shfmt
         args: [-i=4]
-  # BASH linter
-  - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.8.0.4
-    hooks:
-      - id: shellcheck
-        args: [-x]
-  # YAML linters
-  - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.26.3
-    hooks:
-      - id: yamllint

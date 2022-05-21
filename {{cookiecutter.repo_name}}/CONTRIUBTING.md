@@ -23,7 +23,7 @@ For example:
 - `make lint on={{cookiecutter.project_name}}/` runs all linters in the given directory.
 - `make lint on="{{cookiecutter.project_name}}/ tests/"` runs all linters on the given directories.
 - `make lint on=build*` runs all linters on the results of the glob.
-- `make lint on=myspecialdirs` where at the top of the Makefile 
+- `make lint on=myspecialdirs` where at the top of the Makefile
   `myspecialdir=.github/workflows build-support/alpha-build`. Save yourself a bunch of keystrokes by leveraging aliases.
 - `make lint since=master` runs all formatters on the diff between the current branch and master.
 - `make lint since=HEAD~1` runs all formatters on all files that changed since "2 commits ago".
@@ -37,9 +37,9 @@ For example:
 ### Build system
 
 - **Linux, WSL:** Everything should just work.
-- **Windows:** 
+- **Windows:**
   1. You need to have `Git Bash` installed.
-  2. It is recommended to use everything from `Git Bash` 
+  2. It is recommended to use everything from `Git Bash`
   (although one may use `cmd` or `PowerShell` provided `$PATH` is set properly).
   3. Install `Make` for `Git Bash` by running `./build-support/git-bash-utils/install_make.sh`.
 - **MacOS:**
@@ -49,7 +49,7 @@ For example:
 
 **To reproduce the environment exactly**
 
-Open the console and, in an empty environment, run `make env`. This reproduces your environment according to 
+Open the console and, in an empty environment, run `make env`. This reproduces your environment according to
 `constraints.txt`. That is, every time one runs `make env` the environment will always resolve identically.
 
 **To modify the environment**
