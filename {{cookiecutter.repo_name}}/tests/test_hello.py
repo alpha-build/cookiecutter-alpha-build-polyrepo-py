@@ -1,2 +1,4 @@
+from {{cookiecutter.repo_name}}.hello import say_hello
+
 def test_hello() -> None:
-    assert True
+    assert say_hello() == 1
