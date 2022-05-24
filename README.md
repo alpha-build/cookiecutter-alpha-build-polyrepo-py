@@ -2,4 +2,4 @@
 
 ## Getting started
 
-cookiecutter https://github.com/cristianmatache/cookiecutter-alpha-build-polyrepo-py
+`cookiecutter https://github.com/cristianmatache/cookiecutter-alpha-build-polyrepo-py`
