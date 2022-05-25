@@ -60,7 +60,7 @@ Open the console and, in an empty environment, run `make env-upgrade`. Run this 
 if you simply want to let `pip` re-resolve (e.g., to upgrade) the environment and dump the new resolution in the lock
 file.
 
-### Pycharm
+### PyCharm
 
 - **Windows:** You may wish to set the default terminal to `Git Bash`.
   Go to `Settings` (search for "terminal") &#8594; `Tools` &#8594; `Terminal` and change the shell path to
