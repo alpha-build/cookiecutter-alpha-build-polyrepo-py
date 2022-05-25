@@ -11,3 +11,7 @@
 ## Description
 
 ## Getting started
+
+## Development
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md).

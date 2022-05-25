@@ -42,7 +42,8 @@ For example:
   1. You need to have `Git Bash` installed.
   2. It is recommended to use everything from `Git Bash`
      (although one may use `cmd` or `PowerShell` provided `$PATH` is set properly).
-  3. Install `Make` for `Git Bash` by running `./build-support/git-bash-utils/install_make.sh`.
+  3. Install `Make` for `Git Bash` by running `./build-support/git-bash-integration/install_make.sh`.
+     Note that you may need to run `Git Bash` as administrator.
 - **MacOS:**
   1. Add a few GNU utils to your shell: `brew install findutils grep`
 
@@ -58,6 +59,12 @@ Open the console and, in an empty environment, run `make env`. This reproduces y
 Open the console and, in an empty environment, run `make env-upgrade`. Run this if you add/remove a new dependency or
 if you simply want to let `pip` re-resolve (e.g., to upgrade) the environment and dump the new resolution in the lock
 file.
+
+### Pycharm
+
+- **Windows:** You may wish to set the default terminal to `Git Bash`.
+  Go to `Settings` (search for "terminal") &#8594; `Tools` &#8594; `Terminal` and change the shell path to
+  Git Bash, it must be something like `C:\Program Files\Git\bin\bash.exe`.
 
 ### AlphaBuild maintenance
 
