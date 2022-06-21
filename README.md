@@ -16,7 +16,7 @@ standards are met. For this, users of this template can take advantage of:
 Please `pip install cookiecutter` if you haven't done so already and then run the line below in a terminal.
 
 ```bash
-cookiecutter https://github.com/cristianmatache/cookiecutter-alpha-build-polyrepo-py
+cookiecutter https://github.com/alpha-build/cookiecutter-alpha-build-polyrepo-py
 ```
 
 Please answer to the questions when prompted. Finally, `cd` into the newly created project.
