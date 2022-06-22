@@ -2,5 +2,6 @@
   "project_name": "alpha-build-python-polyrepo-project",
   "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
   "author_name": "Your name (or your organization/company/team)",
-  "author_email": "Your email"
+  "author_email": "Your email",
+  "line_length": "120"
 }
