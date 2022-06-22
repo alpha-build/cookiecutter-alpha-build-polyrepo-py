@@ -3,10 +3,10 @@ addopts = "--cov={{cookiecutter.project_name}} --cov-fail-under=75 -vv --duratio
 
 [tool.isort]
 profile = 'black'
-line_length = 120
+line_length = '{{cookiecutter.line_length}}'
 
 [tool.black]
-line-length = 120
+line-length = '{{cookiecutter.line_length}}'
 skip-string-normalization = true
 
 [tool.bandit]
@@ -17,12 +17,15 @@ format = "colored"
 # baseline = ".baseline.txt"  # Uncomment this and run `flakeheaven baseline > .baseline.txt` to ignore legacy errors
 
 [tool.flakeheaven.plugins]
-wemake-python-styleguide = ["+*"]
-flake8-annotations = ["+*"]
+wemake-python-styleguide = [
+    "+*", "-WPS110", "-WPS111", "-WPS120", "-WPS218", "-WPS232", "-WPS305", "-WPS306", "-WPS326", "-WPS305", "-WPS347",
+    "-WPS355", "-WPS358", "-WPS430", "-WPS432", "-WPS462",
+]
+flake8-annotations = ["+*", "-ANN101", "-ANN401"]
 flake8-bugbear = ["+*"]
 flake8-builtins = ["+*"]
-flake8-comprehensions = ["+*"]
-flake8-darglint = ["+*"]
+flake8-comprehensions = ["+*", "-C408"]
+#flake8-darglint = ["+*"]
 flake8-debugger = ["+*"]
 flake8-eradicate = ["+*"]
 flake8-quotes = ["+*"]
@@ -33,7 +36,7 @@ flake8-pytest-style = ["+*"]
 flake8-spellcheck = ["+*"]
 mccabe = ["+*"]
 pep8-naming = ["+*"]
-pycodestyle = ["+*"]
+pycodestyle = ["+*", "-E203", "-W503"]
 pyflakes = ["+*"]
 #pylint = ["+*"]  # Uncomment if you want to enable pylint and use it on top of the baseline
 #flake8-bandit = ["+*"]
@@ -44,7 +47,7 @@ pyflakes = ["+*"]
 extension-pkg-whitelist = "pydantic"
 
 [tool.pylint.FORMAT]
-max-line-length = 120
+max-line-length = '{{cookiecutter.line_length}}'
 disable = [
     "import-error",  # pre-commit does not give access to full env
     "fixme",
@@ -56,4 +59,7 @@ disable = [
     "missing-function-docstring",
     "missing-module-docstring",
     "too-few-public-methods",
+]
+good-names = [
+    "x", "y", "z",
 ]

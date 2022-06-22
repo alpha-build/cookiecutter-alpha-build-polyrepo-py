@@ -42,8 +42,8 @@ repos:
       - id: docformatter
         args:
           - --in-place
-          - --wrap-summaries=120
-          - --wrap-descriptions=120
+          - --wrap-summaries={{cookiecutter.line_length}}
+          - --wrap-descriptions={{cookiecutter.line_length}}
   - repo: https://github.com/ikamensh/flynt
     rev: '0.76'
     hooks:
