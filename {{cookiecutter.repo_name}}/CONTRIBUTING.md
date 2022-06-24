@@ -62,9 +62,18 @@ file.
 
 ### PyCharm
 
-- **Windows:** You may wish to set the default terminal to `Git Bash`.
-  Go to `Settings` (search for "terminal") &#8594; `Tools` &#8594; `Terminal` and change the shell path to
-  Git Bash, it must be something like `C:\Program Files\Git\bin\bash.exe`.
+- **Windows:**
+
+  - You may wish to set the default terminal to `Git Bash`.
+    Go to `Settings` (search for "terminal") &#8594; `Tools` &#8594; `Terminal` and change the shell path to
+    Git Bash, it must be something like `C:\Program Files\Git\bin\bash.exe`.
+  - Also, it is recommended to set the line endings to _Unix-style_. In Pycharm
+    [(see here)](https://www.jetbrains.com/help/pycharm/configuring-line-endings-and-line-separators.html)
+    as well as in `git`:
+
+    ```bash
+    git config --global core.autocrlf true
+    ```
 
 ### AlphaBuild maintenance
 

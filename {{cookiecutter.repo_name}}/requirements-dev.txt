@@ -1,4 +1,5 @@
 pre-commit
+mypy
 shfmt-py
 pytest
 pytest-cov
@@ -6,3 +7,5 @@ sphinx
 nox
 build
 twine
+
+types-requests
