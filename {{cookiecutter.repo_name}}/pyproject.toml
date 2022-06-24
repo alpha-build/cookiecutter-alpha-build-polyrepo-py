@@ -19,7 +19,7 @@ format = "colored"
 [tool.flakeheaven.plugins]
 wemake-python-styleguide = [
     "+*", "-WPS110", "-WPS111", "-WPS120", "-WPS218", "-WPS232", "-WPS305", "-WPS306", "-WPS326", "-WPS305", "-WPS347",
-    "-WPS355", "-WPS358", "-WPS430", "-WPS432", "-WPS462",
+    "-WPS355", "-WPS358", "-WPS430", "-WPS432", "-WPS462", "-WPS602",
 ]
 flake8-annotations = ["+*", "-ANN101", "-ANN401"]
 flake8-bugbear = ["+*"]
