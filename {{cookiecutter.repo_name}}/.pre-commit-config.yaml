@@ -54,25 +54,20 @@ repos:
       - id: isort
         name: isort (python)
         args: [--settings-path=pyproject.toml]
+  # Black also applies to notebooks
   - repo: https://github.com/psf/black
     rev: 22.3.0
     hooks:
       - id: black
         args: [--config=pyproject.toml]
   # Python linters
-  # NOTE! Direct usage of flake8 is disabled (uncomment to use flake8 specifically)
-  #       flake8 is used via flakeheaven which is preferred because it allows running flake8 with plugins on legacy code
-  #  - repo: https://github.com/pycqa/flake8
-  #    rev: 4.0.1
-  #    hooks:
-  #      - id: flake8
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.961
+  - repo: local
     hooks:
       - id: mypy
-        additional_dependencies:
-          - sqlalchemy[mypy]
-          - pydantic
+        name: mypy
+        entry: mypy
+        language: system
+        types_or: [python, pyi]
   - repo: https://github.com/flakeheaven/flakeheaven
     rev: 1.0.1
     hooks:
@@ -120,3 +115,18 @@ repos:
     hooks:
       - id: markdownlint
         args: [--config=.markdownlint.yml]
+  # NOTE! Direct usage of flake8 is disabled (uncomment to use flake8 specifically)
+  #       flake8 is used via flakeheaven which is preferred because it allows running flake8 with plugins on legacy code
+  #  - repo: https://github.com/pycqa/flake8
+  #    rev: 4.0.1
+  #    hooks:
+  #      - id: flake8
+  # NOTE! Usafe of mypy from the mirror is disabled, prefer the local installation of mypy such that one could have
+  #       access to all the type annotations exported by third party libraries.
+  #  - repo: https://github.com/pre-commit/mirrors-mypy
+  #    rev: v0.961
+  #    hooks:
+  #      - id: mypy
+  #        additional_dependencies:
+  #          - sqlalchemy[mypy]
+  #          - pydantic
