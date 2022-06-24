@@ -54,7 +54,8 @@ repos:
       - id: isort
         name: isort (python)
         args: [--settings-path=pyproject.toml]
-  - repo: https://github.com/psf/black # Also applies to notebooks
+  # Black also applies to notebooks
+  - repo: https://github.com/psf/black
     rev: 22.3.0
     hooks:
       - id: black
