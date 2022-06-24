@@ -1,5 +1,7 @@
 # Cookiecutter Template for Polyrepo Project powered by AlphaBuild
 
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+
 This is a template for generic Python projects. The aim is to automate as much as possible while ensuring high
 standards are met. For this, users of this template can take advantage of:
 
