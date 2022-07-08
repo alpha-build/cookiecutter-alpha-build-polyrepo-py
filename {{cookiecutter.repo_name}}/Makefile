@@ -21,10 +21,18 @@ test: pytest  # The pytest goal comes from AlphaBuild Core
 .PHONY: env
 env:
 	$(python) -m pip install --upgrade pip setuptools
-	$(python) -m pip install -r requirements.txt -r requirements-dev.txt -c constraints.txt
+	$(python) -m pip install -r 3rdparty/requirements.txt -r 3rdparty/requirements-dev.txt -c 3rdparty/constraints.txt
 
 .PHONY: env-upgrade
 env-upgrade:
 	$(python) -m pip install --upgrade pip setuptools
-	$(python) -m pip install -r requirements.txt -r requirements-dev.txt
-	$(python) -m pip list --format=freeze > constraints.txt
+	$(python) -m pip install -r 3rdparty/requirements.txt -r 3rdparty/requirements-dev.txt
+	$(python) -m pip list --format=freeze > 3rdparty/constraints.txt
+
+.PHONY: wheel
+wheel:
+	$(python) -m build .
+
+.PHONY: bump
+bump:
+	$(python) -m bumpversion

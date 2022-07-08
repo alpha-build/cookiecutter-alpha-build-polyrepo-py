@@ -7,8 +7,8 @@ import nox
 PYTHON = ('3.7', '3.8', '3.9', '3.10')
 
 LIB_ROOT = Path(__file__).parent
-CORE_REQS = LIB_ROOT / 'requirements.txt'
-DEV_REQS = LIB_ROOT / 'requirements-dev.txt'
+CORE_REQS = LIB_ROOT / '3rdparty/requirements.txt'
+DEV_REQS = LIB_ROOT / '3rdparty/requirements-dev.txt'
 
 
 def get_reqs(*paths: Path) -> list[str]:
