@@ -1,3 +1,3 @@
 def say_hello() -> int:
-    print('Hello')
+    print('Hello')  # noqa: WPS421
     return 1

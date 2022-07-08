@@ -3,7 +3,7 @@ from pathlib import Path
 from setuptools import find_packages, setup
 
 LIB_ROOT = Path(__file__).parent
-REQS_FILE = LIB_ROOT / 'requirements.txt'
+REQS_FILE = LIB_ROOT / '3rdparty/requirements.txt'
 README_FILE = LIB_ROOT / 'README.md'
 
 

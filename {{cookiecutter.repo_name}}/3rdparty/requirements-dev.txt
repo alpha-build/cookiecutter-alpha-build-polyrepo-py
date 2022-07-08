@@ -7,5 +7,6 @@ sphinx
 nox
 build
 twine
+bump2version
 
 types-requests
