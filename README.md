@@ -24,6 +24,8 @@ cookiecutter https://github.com/alpha-build/cookiecutter-alpha-build-polyrepo-py
 Please answer to the questions when prompted. Finally, `cd` into the newly created project.
 Next, check `CONTRIBUTING.md` to set up the development environment. In short, the steps will look like:
 
+## After creating the repo
+
 ```bash
 cd <your-project>
 ```
