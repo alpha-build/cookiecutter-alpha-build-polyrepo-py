@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8, 3.9]
+        python-version: [3.7, 3.8, 3.9]
 
     steps:
       - uses: actions/checkout@v3
@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: {{ "${{matrix.python-version}}" }}
       - name: Get cached dependencies
-        id: cache-deps
+        id: cache-pip-deps
         uses: actions/cache@v3
         with:
           path: ~/.cache/pip/
@@ -25,12 +25,20 @@ jobs:
       - name: Install dependencies
         run: |
           make env
+      - name: Get pre-commit dependencies
+        id: cache-pre-commit-deps
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pre-commit/
+          key: {{ "${{runner.os}}-pre-commit-${{matrix.python-version}}-${{hashFiles('.pre-commit-config.yaml')}}" }}
       - name: Lint
         run: |
           make lint
       - name: Test with pytest
         run: |-
-          make test
+          make test PYTEST_FLAGS='--cov-report=xml'
+      - name: Upload to codecov
+        uses: codecov/codecov-action@v3
       - name: Build wheel
         run: |-
           make wheel
