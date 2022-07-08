@@ -44,7 +44,7 @@ For example:
 **Local multi-env tests:** Test your code locally against multiple Python version by running, from the
 repo root, `nox` or `nox -db conda` if you are using `conda`. See the `nox` docs and the `noxfile.py` to
 understand this better. If you are developing a library this step is particularly important. Conversely, if it is
-an app, the lock file should suffice, but `nox` would still be useful in case you want to migrate to another 
+an app, the lock file should suffice, but `nox` would still be useful in case you want to migrate to another
 python version.
 
 ## Initial set-up
