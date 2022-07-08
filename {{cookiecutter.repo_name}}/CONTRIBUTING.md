@@ -14,9 +14,10 @@
 
 1. **Lint:** Make sure your code complies with the coding standards and run `make lint` in the terminal.
 2. **Test:** Make sure you wrote unit tests and all unit tests pass by running `make test` in the terminal.
-3. **Local multi-env tests:** Make sure you tested your code locally against multiple Python version by running, from
-   the repo root, `nox` or `nox -db conda` if you are using `conda`. See the `nox` docs and the `noxfile.py` to
-   understand this better.
+3. **Local multi-env tests:** Test your code locally against multiple Python version by running, from the
+   repo root, `nox` or `nox -db conda` if you are using `conda`. See the `nox` docs and the `noxfile.py` to
+   understand this better. If you are developing a library this step is particularly important. Conversely, if it is
+   an app, the lock files should suffice.
 
 <!-- markdownlint-disable MD033 -->
 <details>
