@@ -10,8 +10,9 @@ standards are met. For this, users of this template can take advantage of:
   are configured via `pyproject.toml` or specific config files such as `mypy.ini`).
 - A fully equipped Python testing framework (including `nox`).
 - A framework to easily reproduce / upgrade third party dependencies.
-- All the set-up to easily package the app.
-- Continuous Integration and CODEOWNERS.
+- All the set-up to easily package and auto-version the project.
+- Continuous Integration and `CODEOWNERS` (these features are only implemented for Github,
+  while the others are general).
 
 ## Getting started
 
