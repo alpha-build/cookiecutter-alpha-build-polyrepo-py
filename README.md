@@ -24,7 +24,7 @@ cookiecutter https://github.com/alpha-build/cookiecutter-alpha-build-polyrepo-py
 Please answer to the questions when prompted. Finally, `cd` into the newly created project.
 Next, check `CONTRIBUTING.md` to set up the development environment. In short, the steps will look like:
 
-## After creating the repo
+## One-off set-up after creating the project
 
 ```bash
 cd <your-project>
@@ -38,17 +38,18 @@ conda activate my-env
 ```
 
 Test if "reproducing" the environment works (i.e. get all the packages with the versions according to the lock file).
-In CI and most developers will use this command to make sure the dependencies they are using are exactly the same as
-everyone else's. This reproducibility is achieved thanks to a file `3rdparty/constraints.txt`, called "lock file".
+The CI pipeline and most developers will use this command to make sure the dependencies they are using are exactly the
+same as everyone else's. This reproducibility is achieved thanks to a file `3rdparty/constraints.txt`,
+called "lock file".
 
-To upgrade / modify the environment, one needs to change the lock file. If one wants to add or remove packages from
+To upgrade or modify the environment, one needs to change the lock file. If one wants to add or remove packages from
 the environment one should edit `3rdparty/requirements.txt` (for core dependencies) or `3rdparty/requirements-dev.txt`
 (for dev-only dependencies) and then regenerate the lock file. Because the lock file associated with the project may
-become outdated, let's also run the upgrade.
+become outdated, let's also run the environment upgrade.
 
 ```bash
-make env
-make env-upgrade
+make env  # Reproduce according to the lock file
+make env-upgrade  # Upgrade the environment and the lock file
 ```
 
 Set up as a git repo
