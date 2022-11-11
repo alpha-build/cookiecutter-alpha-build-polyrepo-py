@@ -18,9 +18,9 @@ lint: pre-commit-run  # The pre-commit-run goal comes from AlphaBuild Core
 .PHONY: test
 test: pytest  # The pytest goal comes from AlphaBuild Core
 	@echo "Check coverage on the diff between the main branch and the current revision"
-	$(python) -m diff_cover.diff_cover_tool coverage.xml --compare-branch {{cookiecutter.main_branch_name}} --fail-under {{cookiecutter.min_test_coverage}}
+	$(python) -m diff_cover.diff_cover_tool coverage.xml --config-file=pyproject.toml --fail-under={{cookiecutter.min_test_coverage}}
 # Uncomment the below to set specific test coverage requirements for specific sub-directories (usually stricter than the global setting)
-#	$(python) -m coverage report --include ="{{cookiecutter.package_name}}/critical-module/*" --fail-under=95
+#	$(python) -m coverage report --include="{{cookiecutter.package_name}}/critical-module/*" --fail-under=95
 
 .PHONY: env
 env:

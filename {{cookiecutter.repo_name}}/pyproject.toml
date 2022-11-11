@@ -72,3 +72,10 @@ exclude_line = [
     "pragma: no cover",
     "if __name__ == .__main__.",
 ]
+
+[tool.diff_cover]
+compare_branch = "{{cookiecutter.main_branch_name}}"
+ignore_whitespace = true
+#ignore_unstaged = true
+show_uncovered = true
+#quiet = true
