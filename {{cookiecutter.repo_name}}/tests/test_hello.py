@@ -1,4 +1,4 @@
-from {{cookiecutter.project_name}}.hello import say_hello
+from {{cookiecutter.package_name}}.hello import say_hello
 
 
 def test_hello() -> None:

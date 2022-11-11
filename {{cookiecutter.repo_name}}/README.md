@@ -1,4 +1,4 @@
-# {{cookiecutter.project_name}}
+# {{cookiecutter.package_name}}
 
 [//]: # "add-your-build-status-badge-here"
 

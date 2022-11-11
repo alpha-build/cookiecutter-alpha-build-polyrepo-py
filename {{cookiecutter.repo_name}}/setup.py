@@ -9,7 +9,7 @@ README_FILE = LIB_ROOT / 'README.md'
 
 def main() -> None:
     setup(
-        name='{{cookiecutter.project_name}}',
+        name='{{cookiecutter.package_name}}',
         version='0.0.1',
         packages=find_packages(exclude=['tests*']),
         python_requires='>=3.7',
