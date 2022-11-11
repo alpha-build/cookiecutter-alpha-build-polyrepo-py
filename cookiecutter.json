@@ -1,7 +1,9 @@
 {
-  "project_name": "alpha-build-python-polyrepo-project",
-  "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "repo_name": "alpha-build-python-polyrepo-project",
+  "package_name": "{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}",
   "author_name": "Your name (or your organization/company/team)",
   "author_email": "Your email",
-  "line_length": "120"
+  "line_length": "120",
+  "main_branch_name": "main",
+  "min_test_coverage": "75"
 }

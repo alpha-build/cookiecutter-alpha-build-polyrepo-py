@@ -3,20 +3,24 @@ MAKEFLAGS += -j1
 
 include build-support/alpha-build/core/resolver.mk  # Utilities to resolve targets
 
-PY_SOURCES_ROOTS={{cookiecutter.project_name}}/
+PY_SOURCES_ROOTS={{cookiecutter.package_name}}/
 include build-support/alpha-build/core/python/pythonpath.mk  # Let AlphaBuild set PYTHONPATH based on PY_SOURCES_ROOTS
 
 include build-support/alpha-build/core/multi/pre-commit.mk
 include build-support/alpha-build/core/python/test.mk
 
 # Define where Python files live (for testing purposes)
-ONPY={{cookiecutter.project_name}}/ tests/
+ONPY={{cookiecutter.package_name}}/ tests/
 
 .PHONY: lint
 lint: pre-commit-run  # The pre-commit-run goal comes from AlphaBuild Core
 
 .PHONY: test
 test: pytest  # The pytest goal comes from AlphaBuild Core
+	@echo "Check coverage on the diff between the main branch and the current revision"
+	$(python) -m diff_cover.diff_cover_tool coverage.xml --compare-branch {{cookiecutter.main_branch_name}} --fail-under {{cookiecutter.min_test_coverage}}
+# Uncomment the below to set specific test coverage requirements for specific sub-directories (usually stricter than the global setting)
+#	$(python) -m coverage report --include ="{{cookiecutter.package_name}}/critical-module/*" --fail-under=95
 
 .PHONY: env
 env:

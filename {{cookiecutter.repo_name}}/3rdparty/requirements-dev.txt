@@ -3,6 +3,7 @@ mypy
 shfmt-py
 pytest
 pytest-cov
+diff_cover
 sphinx
 nox
 build

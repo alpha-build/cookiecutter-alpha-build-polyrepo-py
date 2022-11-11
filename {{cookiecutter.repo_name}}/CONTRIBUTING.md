@@ -13,7 +13,9 @@
 ## Frequent Actions
 
 1. **Lint:** Make sure your code complies with the coding standards and run `make lint` in the terminal.
+   Linters can be configured from `pyproject.toml` (e.g., disabling a lint rule).
 2. **Test:** Make sure you wrote unit tests and all unit tests pass by running `make test` in the terminal.
+   Check `htmlcov/index.html` to see the test coverage breakdown per file.
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -22,9 +24,9 @@
   </summary>
 For example:
 
-- `make lint on={{cookiecutter.project_name}}/hello.py` runs all on the given file.
-- `make lint on={{cookiecutter.project_name}}/` runs all linters in the given directory.
-- `make lint on="{{cookiecutter.project_name}}/ tests/"` runs all linters on the given directories.
+- `make lint on={{cookiecutter.package_name}}/hello.py` runs all on the given file.
+- `make lint on={{cookiecutter.package_name}}/` runs all linters in the given directory.
+- `make lint on="{{cookiecutter.package_name}}/ tests/"` runs all linters on the given directories.
 - `make lint on=build*` runs all linters on the results of the glob.
 - `make lint on=myspecialdirs` where at the top of the Makefile
   `myspecialdir=.github/workflows build-support/alpha-build`. Save yourself a bunch of keystrokes by leveraging aliases.
