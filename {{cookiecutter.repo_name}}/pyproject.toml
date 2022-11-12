@@ -77,5 +77,5 @@ exclude_line = [
 compare_branch = "{{cookiecutter.main_branch_name}}"
 ignore_whitespace = true
 #ignore_unstaged = true
-show_uncovered = true
+show_uncovered = false
 #quiet = true
