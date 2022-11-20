@@ -11,6 +11,7 @@ repos:
     rev: v2.6.2
     hooks:
       - id: prettier
+        args: [--config=.prettierrc.yaml]
         exclude: (.*ci.yml|.*.yamllint.yaml|.*.markdownlint.yml|.*.prettierrc.yaml)
   # GENERAL
   - repo: https://github.com/pre-commit/pre-commit-hooks
