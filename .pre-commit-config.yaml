@@ -5,13 +5,13 @@ repos:
     rev: 0.9.0
     hooks:
       - id: yamlfix
-        exclude: (.*ci.yml|.*.yamllint.yaml|.*.markdownlint.yml)
+        exclude: (.*ci.yml|.*.yamllint.yaml|.*.markdownlint.yml|.*.prettierrc.yaml)
   # Prettier auto-formatter
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v2.6.2
     hooks:
       - id: prettier
-        exclude: (.*ci.yml|.*.yamllint.yaml|.*.markdownlint.yml)
+        exclude: (.*ci.yml|.*.yamllint.yaml|.*.markdownlint.yml|.*.prettierrc.yaml)
   # GENERAL
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.2.0
@@ -26,7 +26,7 @@ repos:
         exclude: .*test_hello.py
       - id: check-docstring-first
       - id: check-yaml
-        exclude: (.*ci.yml|.*.yamllint.yaml|.*.markdownlint.yml)
+        exclude: (.*ci.yml|.*.yamllint.yaml|.*.markdownlint.yml|.*.prettierrc.yaml)
       - id: check-toml
       - id: check-added-large-files
   # Python auto-formatters

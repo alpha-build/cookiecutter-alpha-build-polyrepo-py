@@ -1,5 +1,6 @@
 ---
 endOfLine: lf
+printWidth: {{cookiecutter.line_length}}
 overrides:
   - files:
       - '*.yaml'
