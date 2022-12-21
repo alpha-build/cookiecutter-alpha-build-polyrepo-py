@@ -20,6 +20,7 @@ def main() -> None:
         author_email='{{cookiecutter.author_email}}',
         description='',
         long_description=README_FILE.read_text(encoding='utf-8'),
+        long_description_content_type="text/markdown",
     )
 
 
