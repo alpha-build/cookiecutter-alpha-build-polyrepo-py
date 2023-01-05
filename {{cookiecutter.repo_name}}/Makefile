@@ -1,6 +1,7 @@
 SHELL := /usr/bin/env bash
 MAKEFLAGS += -j1
 
+include build-support/alpha-build/core/helpers.mk
 include build-support/alpha-build/core/resolver.mk  # Utilities to resolve targets
 
 PY_SOURCES_ROOTS={{cookiecutter.package_name}}/
