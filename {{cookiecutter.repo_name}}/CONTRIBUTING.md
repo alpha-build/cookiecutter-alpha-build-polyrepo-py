@@ -111,7 +111,7 @@ upgrade the versions of these linters and formatters.
 To upgrade AlphaBuild run the following:
 
 ```bash
-pip install alpha-build-core --target tmp/
-tar -xvf tmp/alpha_build_core.tar.gz
+pip install alpha-build-lite-py --target tmp/
+tar -xvf tmp/alpha_build_lite_py.tar.gz
 rm -rf tmp/
 ```
