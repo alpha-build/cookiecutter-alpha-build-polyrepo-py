@@ -15,7 +15,7 @@ def main() -> None:
         python_requires='>=3.7',
         install_requires=REQS_FILE.read_text(encoding='utf-8'),
         zip_safe=False,  # for mypy
-        package_data={'{self.lib_name}': ['py.typed']},  # expose types to users
+        package_data={'{{cookiecutter.package_name}}': ['py.typed']},  # expose types to users
         author='{{cookiecutter.author_name}}',
         author_email='{{cookiecutter.author_email}}',
         description='',
