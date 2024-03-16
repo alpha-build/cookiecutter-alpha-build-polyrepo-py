@@ -61,7 +61,6 @@ repos:
       - id: black
         args: [--config=pyproject.toml]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    # Ruff version.
     rev: ''
     hooks:
       - id: ruff-format
