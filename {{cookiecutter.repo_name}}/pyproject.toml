@@ -88,7 +88,7 @@ extend-exclude = [
     ".idea",
     "build-support",
 ]
-line-length = 120
+line-length = '{{cookiecutter.line_length}}'
 indent-width = 4
 
 [tool.ruff.format]
