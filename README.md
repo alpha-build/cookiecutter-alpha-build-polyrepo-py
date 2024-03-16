@@ -34,7 +34,7 @@ cd <your-project>
 Create and activate the environment, e.g. with conda
 
 ```bash
-conda create -n my-env python=3.9 -y
+conda create -n my-env python=3.10 -y
 conda activate my-env
 ```
 
@@ -74,12 +74,14 @@ have fixed the issues).
 make lint
 ```
 
+If you haven't set up make on your machine, you can try running `pre-commit run --all-files`.
 Let's test whether testing works as well.
 
 ```bash
 make test
 ```
 
+Again, if you haven't set up make on your machine, you can try running `pytest --rootdir=. -m "" -k ""tests/`.
 To test whether everything works with multiple Python versions, run the same tests but with "nox".
 
 ```bash
