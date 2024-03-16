@@ -98,9 +98,13 @@ skip-magic-trailing-comma = false
 line-ending = "lf"
 
 [tool.ruff.lint]
-ignore = []
+select = []
+ignore = [
+    "Q000", "ANN101", "RUF100", "S101",
+]
 fixable = ["ALL"]
 
 [tool.ruff.lint.per-file-ignores]
+"**/{tests}/*" = ["ALL"]
 
 [tool.ruff.lint.isort]
