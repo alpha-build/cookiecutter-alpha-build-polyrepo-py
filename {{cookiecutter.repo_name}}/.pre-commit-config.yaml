@@ -3,19 +3,19 @@ exclude: build-support/alpha-build/core|build-support/git-bash-integration
 repos:
   # YAML auto-formatters
   - repo: https://github.com/lyz-code/yamlfix/
-    rev: ''
+    rev: ""
     hooks:
       # On Windows, this writes \r\n newlines that need to be fixed by the next hook
       - id: yamlfix
   # Prettier auto-formatter
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: ''
+    rev: ""
     hooks:
       # On Windows, this writes \r\n newlines that need to be fixed by the next hook
       - id: prettier
   # GENERAL
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: ''
+    rev: ""
     hooks:
       - id: end-of-file-fixer
       - id: trailing-whitespace
@@ -29,7 +29,7 @@ repos:
       - id: check-added-large-files
   # Python auto-formatters
   - repo: https://github.com/PyCQA/autoflake
-    rev: ''
+    rev: ""
     hooks:
       - id: autoflake
         args:
@@ -37,7 +37,7 @@ repos:
           - --remove-all-unused-imports
           - --remove-unused-variables
   - repo: https://github.com/PyCQA/docformatter
-    rev: ''
+    rev: ""
     hooks:
       - id: docformatter
         args:
@@ -45,21 +45,28 @@ repos:
           - --wrap-summaries={{cookiecutter.line_length}}
           - --wrap-descriptions={{cookiecutter.line_length}}
   - repo: https://github.com/ikamensh/flynt
-    rev: ''
+    rev: ""
     hooks:
       - id: flynt
   - repo: https://github.com/pycqa/isort
-    rev: ''
+    rev: ""
     hooks:
       - id: isort
         name: isort (python)
         args: [--settings-path=pyproject.toml]
   # Black also applies to notebooks
   - repo: https://github.com/psf/black
-    rev: ''
+    rev: ""
     hooks:
       - id: black
         args: [--config=pyproject.toml]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: ""
+    hooks:
+      - id: ruff-format
+        name: ruff format
+      - id: ruff
+        name: ruff lint
   # Python linters
   - repo: local
     hooks:
@@ -69,49 +76,47 @@ repos:
         language: system
         types_or: [python, pyi]
   - repo: https://github.com/flakeheaven/flakeheaven
-    rev: ''
+    rev: ""
     hooks:
       - id: flakeheaven
-        additional_dependencies:
-          - wemake-python-styleguide
-          - flake8-annotations
+        additional_dependencies: [wemake-python-styleguide, flake8-annotations]
   - repo: https://github.com/Lucas-C/pre-commit-hooks-bandit
-    rev: ''
+    rev: ""
     hooks:
       - id: python-bandit-vulnerability-check
         name: bandit
         args: [--configfile pyproject.toml]
   - repo: https://github.com/pycqa/pylint
-    rev: ''
+    rev: ""
     hooks:
       - id: pylint
         args: [--rcfile=pyproject.toml]
   # JUPYTER auto-formatters
   - repo: https://github.com/kynan/nbstripout
-    rev: ''
+    rev: ""
     hooks:
       - id: nbstripout
   # BASH auto-formatters
   - repo: https://github.com/cisagov/pre-commit-shfmt
-    rev: ''
+    rev: ""
     hooks:
       - id: shfmt
         args: [-i=4]
   # BASH linter
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: ''
+    rev: ""
     hooks:
       - id: shellcheck
         args: [-x]
   # YAML linters
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: ''
+    rev: ""
     hooks:
       - id: yamllint
         args: [-c=.yamllint.yaml]
   # Markdown lint
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: ''
+    rev: ""
     hooks:
       - id: markdownlint
         args: [--config=.markdownlint.yml]

@@ -31,7 +31,7 @@ env:
 .PHONY: env-upgrade
 env-upgrade:
 	$(python) -m pip install --upgrade pip setuptools
-	$(python) -m pip install -r 3rdparty/requirements.txt -r 3rdparty/requirements-dev.txt
+	$(python) -m pip install --upgrade -r 3rdparty/requirements.txt -r 3rdparty/requirements-dev.txt
 	$(python) -m pip list --format=freeze > 3rdparty/constraints.txt
 
 .PHONY: wheel

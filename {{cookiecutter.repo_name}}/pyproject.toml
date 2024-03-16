@@ -1,6 +1,9 @@
 [tool.pytest.ini_options]
 addopts = "--cov={{cookiecutter.package_name}} --cov-fail-under={{cookiecutter.min_test_coverage}} -vv --durations=10 --cov-report html --cov-report xml"
 
+[tool.yamlfix]
+preserve_quotes = true
+
 [tool.isort]
 profile = 'black'
 line_length = '{{cookiecutter.line_length}}'
@@ -36,7 +39,7 @@ flake8-pytest-style = ["+*"]
 flake8-spellcheck = ["+*"]
 mccabe = ["+*"]
 pep8-naming = ["+*"]
-pycodestyle = ["+*", "-E203", "-W503"]
+pycodestyle = ["+*", "-E203", "-E704", "-E999", "-W503"]
 pyflakes = ["+*"]
 #pylint = ["+*"]  # Uncomment if you want to enable pylint and use it on top of the baseline
 #flake8-bandit = ["+*"]
@@ -79,3 +82,29 @@ ignore_whitespace = true
 #ignore_unstaged = true
 show_uncovered = false
 #quiet = true
+
+[tool.ruff]
+extend-exclude = [
+    ".idea",
+    "build-support",
+]
+line-length = '{{cookiecutter.line_length}}'
+indent-width = 4
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "lf"
+
+[tool.ruff.lint]
+select = []
+ignore = [
+    "Q000", "ANN101", "RUF100", "S101",
+]
+fixable = ["ALL"]
+
+[tool.ruff.lint.per-file-ignores]
+"**/{tests}/*" = ["ALL"]
+
+[tool.ruff.lint.isort]
