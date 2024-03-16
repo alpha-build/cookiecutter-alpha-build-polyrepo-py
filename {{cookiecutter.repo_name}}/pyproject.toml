@@ -1,6 +1,9 @@
 [tool.pytest.ini_options]
 addopts = "--cov={{cookiecutter.package_name}} --cov-fail-under={{cookiecutter.min_test_coverage}} -vv --durations=10 --cov-report html --cov-report xml"
 
+[tool.yamlfix]
+preserve_quotes = true
+
 [tool.isort]
 profile = 'black'
 line_length = '{{cookiecutter.line_length}}'
@@ -79,3 +82,25 @@ ignore_whitespace = true
 #ignore_unstaged = true
 show_uncovered = false
 #quiet = true
+
+[tool.ruff]
+extend-exclude = [
+    ".idea",
+    "build-support",
+]
+line-length = 120
+indent-width = 4
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "lf"
+
+[tool.ruff.lint]
+ignore = []
+fixable = ["ALL"]
+
+[tool.ruff.lint.per-file-ignores]
+
+[tool.ruff.lint.isort]
